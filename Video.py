@@ -128,7 +128,7 @@ def test(batchsize, device, epochs=5, labels=3, feature='cqcc'):
     test_dataset = utils.MatDataset("test", feature)
 
     VGG = VGG_11(labels)
-    VGG.load_state_dict(torch.load('modelWeight/IEMOCAP_cqcc/video-cqcc_38.pt'))
+    VGG.load_state_dict(torch.load('modelWeight/IEMOCAP_cqcc/video-cqcc.pt'))
 
     utils.testModel(VGG, test_dataset, batchsize, epochs=epochs, device=device)
 
@@ -136,8 +136,8 @@ def test_joint(batchsize, device, epochs=5, labels=3):
     I3D_rgb = InceptionI3d(labels, in_channels=3)
     I3D_flow = InceptionI3d(labels, in_channels=2)
     VGG = VGG_11(labels)
-    I3D_rgb.load_state_dict(torch.load('modelWeight/IEMOCAP_I3D_rgb_adam/I3D-rgb_400.pt'))
-    I3D_flow.load_state_dict(torch.load('modelWeight/IEMOCAP_I3D_flow_adam/I3D-flow_400.pt'))
+    I3D_rgb.load_state_dict(torch.load('modelWeight/IEMOCAP_I3D_rgb_adam/I3D-rgb.pt'))
+    I3D_flow.load_state_dict(torch.load('modelWeight/IEMOCAP_I3D_flow_adam/I3D-flow.pt'))
     VGG.load_state_dict(torch.load('modelWeight/IEMOCAP_cqcc/video-cqcc_38.pt'))
 
     Test_acc = []
@@ -182,8 +182,8 @@ def test_joint(batchsize, device, epochs=5, labels=3):
 def test_classes(batchsize, device, epochs=5, labels=3):
     I3D_rgb = InceptionI3d(labels, in_channels=3)
     I3D_flow = InceptionI3d(labels, in_channels=2)
-    I3D_rgb.load_state_dict(torch.load('modelWeight/I3DTrain_rgb_adam/I3D-rgb_80.pt', map_location='cpu'))
-    I3D_flow.load_state_dict(torch.load('modelWeight/I3DTrain_flow_adam/I3D-flow_80.pt', map_location='cpu'))
+    I3D_rgb.load_state_dict(torch.load('modelWeight/I3DTrain_rgb_adam/I3D-rgb.pt', map_location='cpu'))
+    I3D_flow.load_state_dict(torch.load('modelWeight/I3DTrain_flow_adam/I3D-flow.pt', map_location='cpu'))
 
     test_dataset = JointDataset()
     test_dataloader = data_utl.DataLoader(test_dataset, batch_size=batchsize, shuffle=True, num_workers=10,
