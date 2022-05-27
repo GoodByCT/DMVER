@@ -370,10 +370,10 @@ def fixed(batchsize, savepath, device, labels=3, epochs=5, mode="rgb"):
 
     if mode == "rgb":
         I3D = InceptionI3d(3, in_channels=3)
-        I3D.load_state_dict(torch.load('modelWeight/I3DTrain_rgb_adam/I3D-rgb_80.pt', map_location='cpu'))
+        I3D.load_state_dict(torch.load('modelWeight/I3DTrain_rgb_adam/I3D-rgb.pt', map_location='cpu'))
     elif mode == "flow":
         I3D = InceptionI3d(3, in_channels=2)
-        I3D.load_state_dict(torch.load('modelWeight/I3DTrain_flow_adam/I3D-flow_80.pt', map_location='cpu'))
+        I3D.load_state_dict(torch.load('modelWeight/I3DTrain_flow_adam/I3D-flow.pt', map_location='cpu'))
     else:
         raise KeyError('Mode error, please input one of \'rgb\' and \'flow\'.')
 
@@ -398,10 +398,10 @@ def full_ft(batchsize, savepath, device, labels=3, epochs=5, mode="rgb"):
 
     if mode == "rgb":
         I3D = InceptionI3d(3, in_channels=3)
-        I3D.load_state_dict(torch.load('modelWeight/I3DTrain_rgb_adam/I3D-rgb_80.pt', map_location='cpu'))
+        I3D.load_state_dict(torch.load('modelWeight/I3DTrain_rgb_adam/I3D-rgb.pt', map_location='cpu'))
     elif mode == "flow":
         I3D = InceptionI3d(3, in_channels=2)
-        I3D.load_state_dict(torch.load('modelWeight/I3DTrain_flow_adam/I3D-flow_80.pt', map_location='cpu'))
+        I3D.load_state_dict(torch.load('modelWeight/I3DTrain_flow_adam/I3D-flow.pt', map_location='cpu'))
     else:
         raise KeyError('Mode error, please input one of \'rgb\' and \'flow\'.')
 
@@ -422,10 +422,10 @@ def test(batchsize, device, labels=3, epochs=5, mode="rgb"):
 
     if mode == "rgb":
         I3D = InceptionI3d(labels, in_channels=3)
-        I3D.load_state_dict(torch.load('modelWeight/IEMOCAP_I3D_rgb_ft/I3D-rgb_200.pt', map_location='cpu'))
+        I3D.load_state_dict(torch.load('modelWeight/IEMOCAP_I3D_rgb_ft/I3D-rgb.pt', map_location='cpu'))
     elif mode == "flow":
         I3D = InceptionI3d(labels, in_channels=2)
-        I3D.load_state_dict(torch.load('modelWeight/IEMOCAP_I3D_rgb_ft/I3D-flow_400.pt', map_location='cpu'))
+        I3D.load_state_dict(torch.load('modelWeight/IEMOCAP_I3D_rgb_ft/I3D-flow.pt', map_location='cpu'))
     else:
         raise KeyError('Mode error, please input one of \'rgb\' , \'flow\' and \'flow\'.')
 
@@ -435,8 +435,8 @@ def test(batchsize, device, labels=3, epochs=5, mode="rgb"):
 def test_joint(batchsize, device, labels=3, epochs=5):
     I3D_rgb = InceptionI3d(labels, in_channels=3)
     I3D_flow = InceptionI3d(labels, in_channels=2)
-    I3D_rgb.load_state_dict(torch.load('modelWeight/I3DTrain_rgb_adam/I3D-rgb_80.pt', map_location='cpu'))
-    I3D_flow.load_state_dict(torch.load('modelWeight/I3DTrain_flow_adam/I3D-flow_80.pt', map_location='cpu'))
+    I3D_rgb.load_state_dict(torch.load('modelWeight/I3DTrain_rgb_adam/I3D-rgb.pt', map_location='cpu'))
+    I3D_flow.load_state_dict(torch.load('modelWeight/I3DTrain_flow_adam/I3D-flow.pt', map_location='cpu'))
 
     Test_acc = []
 
