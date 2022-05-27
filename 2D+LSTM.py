@@ -197,7 +197,7 @@ def fixed(batchsize, savepath, device, epochs, labels=3):
     val_dataset = utils.ImageDataset("val", "lstm")
 
     reslstm = ResLSTM(device=device)
-    reslstm.load_state_dict(torch.load('modelWeight/ResLSTM/ResLSTM_40.pt'))
+    reslstm.load_state_dict(torch.load('modelWeight/ResLSTM/ResLSTM.pt'))
 
     for i in reslstm.parameters():
         i.requires_grad = False
@@ -216,7 +216,7 @@ def test(batchsize, device, epochs=5, labels=3):
     test_dataset = utils.ImageDataset("test", "lstm")
 
     reslstm = ResLSTM(classes=labels, device=device)
-    reslstm.load_state_dict(torch.load('modelWeight/IEMOCAP_ResLSTM/ResLSTM_200.pt'))
+    reslstm.load_state_dict(torch.load('modelWeight/IEMOCAP_ResLSTM/ResLSTM.pt'))
 
     utils.testModel(reslstm, test_dataset, batchsize, epochs, device)
 
