@@ -1,2 +1,2 @@
-# DSVER
-DSVER: a Large Dataset of Short Videos for Emotion Recognition
+# DMVER
+DMVER: a Large Dataset of Micro Videos for Emotion Recognition
