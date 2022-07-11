@@ -20,5 +20,61 @@ Total number of emotion classes        | 3
 Minimum resolution of videos           | 720x560p
 Max resolution of videos               | 1920x1080p
 Average length of sentences in seconds | 15
- 
-We use the current mainstream emotion recognition methods in videos to define the baseline of the proposed dataset. We analyze the factors that affect the performance of the model based on the results. The research results prove the usability and challenge of the dataset. It may bring some new inspirations to future correlations.
+
+The performance of current mainstream emotion recognition methods in videos of the proposed dataset. And the existing dataset is introduced for performance comparison.
+
+<table border="1" width="500px" cellspacing="10">
+<tr>
+<td rowspan="2" align="center">Method</td>
+<td colspan="3" align="center">IEMOCAP</td>
+<td colspan="3" align="center">Music-video</td>
+<td colspan="3" align="center">DMVER</td>
+</tr>
+<tr>
+<td>RGB</td>
+<td>Flow/Audio</td>
+<td>Joint</td>
+<td>RGB</td>
+<td>Flow/Audio</td>
+<td>Joint</td>
+<td>RGB</td>
+<td>Flow/Audio</td>
+<td>Joint</td>
+</tr>
+<tr>
+<td>ConvNet+LSTM</td>
+<td>50.77%</td>
+<td>-</td>
+<td>-</td>
+<td>27.92%</td>
+<td>-</td>
+<td>-</td>
+<td>37.91%</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>I3D</td>
+<td>78.46%</td>
+<td>56.15%</td>
+<td>77.5%</td>
+<td>57.61%</td>
+<td>48.98%</td>
+<td>55.58%</td>
+<td>54.02%</td>
+<td>59.03%</td>
+<td>61.67%</td>
+</tr>
+<tr>
+<td>Audio+I3D</td>
+<td>78.46%</td>
+<td>55.96%</td>
+<td>72.69%</td>
+<td>57.61%</td>
+<td>44.42%</td>
+<td>58.38%</td>
+<td>54.02%</td>
+<td>46.42%</td>
+<td>62.41%</td>
+</tr>
+</table>
