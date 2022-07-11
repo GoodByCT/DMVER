@@ -78,3 +78,11 @@ The performance of current mainstream emotion recognition methods in videos of t
 <td>62.41%</td>
 </tr>
 </table>
+
+### How do you get it
+
+Regarding the use of this dataset, we have considered the rules and regulations of the platform and decided to use the application review system for this dataset. We have provided a web page under our organization’s domain name for the application. Applicants should fill in the correct information completely and we will strictly review the information of the applicant to avoid the use of the dataset for commercial or profit-making purposes. For scientific research and non-profit use, we will actively provide dataset and assistance. You can apply our dataset at [Google Drive](https://docs.google.com/document/d/1JfYvcgfu1HKTV5t1r92XKx6Dea9ep7Mu/editusp=sharing&ouid=111113122247431452824&rtpof=true&sd=true), and Chinese users apply at [Baidu Netdisk](https://pan.baidu.com/s/1vOWCbYgc71rNOHjnYZdArQ?pwd=4xun).
+
+### About pre-training parameters
+
+We have released  the trained baseline models (in Pytorch) at [Google Drive](https://drive.google.com/drive/folders/1zeCPNNpbfHj66X1jRsPAQWY6WwfcZqaR?usp=sharing) and [Baidu Netdisk](https://pan.baidu.com/s/1BC4Mz8e2R9jha_vLdgv21Q?pwd=46xm).
