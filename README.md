@@ -23,7 +23,7 @@ Average length of sentences in seconds | 15
 
 The performance of current mainstream emotion recognition methods in videos of the proposed dataset. And the existing dataset is introduced for performance comparison.
 
-<table border="1" cellspacing="1">
+<table border="1" width="500px" cellspacing="10">
 <tr>
 <td rowspan="2" align="center">Method</td>
 <td colspan="3" align="center">IEMOCAP</td>
